@@ -8,11 +8,12 @@ namespace Challenges
         {
 
             PrintMessage();
-         
-
+          Tuple<string, string, string > person= MyName();
+            Console.WriteLine($"{person.Item3}, {person.Item1} {person.Item2}");
             string msg = GetMessage();
 
             PrintMessage(msg);
+           
             TimeStamp(ref msg);
             Console.WriteLine(msg);
 
@@ -41,15 +42,27 @@ namespace Challenges
             string message = Console.ReadLine();
             return message;
         }
+        private static Tuple< string, string, string> MyName()
+        { 
+            Console.WriteLine("what is your First name");
+            
+            string FirstName=Console.ReadLine();
+            Console.WriteLine("what is your middle name if any");
+            string MiddleName=Console.ReadLine();
+            Console.WriteLine("what is your last name");
+             string  LastName=Console.ReadLine();
+            Tuple<string, string, string > MyName = new Tuple < string, string, string >(FirstName, MiddleName, LastName);
+            return MyName;
 
-        private static void PrintMessage(string messageToPrint = "Hello Gotham!")
+        }
+        private static void PrintMessage(string messageToPrint = "Hello dAD!")
         {
             Console.WriteLine(messageToPrint);
         }
         
-        private static void PrintMessage()
-        {
-            Console.WriteLine("Hello Gotham!");
-        }
+       // private static void PrintMessage()
+        //{
+        //    Console.WriteLine("Hello Gotham!");
+       // }
     }
 }
