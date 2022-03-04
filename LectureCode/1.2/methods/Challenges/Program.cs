@@ -6,7 +6,9 @@ namespace Challenges
     {
         static void Main(string[] args)
         {
+
             PrintMessage();
+         
 
             string msg = GetMessage();
 
@@ -44,10 +46,10 @@ namespace Challenges
         {
             Console.WriteLine(messageToPrint);
         }
-
-        //private static void PrintMessage()
-        //{
-        //    Console.WriteLine("Hello Gotham!");
-        //}
+        
+        private static void PrintMessage()
+        {
+            Console.WriteLine("Hello Gotham!");
+        }
     }
 }
