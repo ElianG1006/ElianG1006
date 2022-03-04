@@ -32,11 +32,12 @@ namespace Samples
             }
 
             Challenge2();
+            Challenge3();
         }
 
         private static void Challenge2()
         {
-            Console.Clear();
+            //Console.Clear();
             string names = "Joker,,,Riddler,Catwoman,,Twoface,Bane|Gordon||Barbara";
             Console.WriteLine("------------DC Characters----------");
             char[] delimiters = new char[] { ',', '|' };
@@ -45,6 +46,22 @@ namespace Samples
             {
                 Console.WriteLine(characters[i]);
             }
+
+        }
+        private static void Challenge3()
+        {
+            string games = "BlackOps1,,,,,,,,,,,,,,,BlackOps2||||,BlackOps3,BlackOpsColdWar";
+            Console.WriteLine("--------------------Black Ops Games------------------");
+            char[] delimiter = new char[] { '|',',' };
+            string[] BlackOpsGames = games.Split(delimiter, StringSplitOptions.RemoveEmptyEntries);
+            for (int i = 0; i < BlackOpsGames.Length; i++) 
+            {
+                Console.WriteLine(BlackOpsGames[i]);
+            }
+
+
+
         }
     }
+    
 }
